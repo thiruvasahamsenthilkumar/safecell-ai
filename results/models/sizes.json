@@ -1,4 +1,4 @@
 {
   "fp32_tflite_bytes": 2800,
-  "int8_tflite_bytes": 3104
+  "int8_tflite_bytes": 2576
 }

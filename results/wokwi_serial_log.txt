@@ -1,0 +1,42 @@
+Serial output of firmware/esp32 (safecell_merged.bin) in the Wokwi web simulator (wokwi.com), ESP32 DevKit v1.
+Timings are measured in Wokwi simulation, not on real hardware.
+
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+
+=== SafeCell AI: on-chip SoH + overheating alarm ===
+
+--- Cycle 1 (early, dataset cycle 1, 197 samples) ---
+  features: dt_window=1641.360 temp_start=28.079 temp_rise=5.363 v_drop_60s=0.2571
+Cycle 1: SoH predicted 93.5% | true 92.8% | inference 866 us
+  end of cycle: normal (green LED)
+
+--- Cycle 2 (mid, dataset cycle 84, 329 samples) ---
+  features: dt_window=1161.485 temp_start=27.696 temp_rise=5.029 v_drop_60s=0.2680
+Cycle 2: SoH predicted 78.1% | true 77.4% | inference 866 us
+  end of cycle: normal (green LED)
+
+--- Cycle 3 (late, dataset cycle 168, 300 samples) ---
+  features: dt_window=852.469 temp_start=27.564 temp_rise=5.011 v_drop_60s=0.2993
+Cycle 3: SoH predicted 70.4% | true 66.3% | inference 865 us
+  end of cycle: normal (green LED)
+
+--- Cycle 4 (late+fault, dataset cycle 160, 299 samples) ---
+  features: dt_window=824.453 temp_start=25.886 temp_rise=5.592 v_drop_60s=0.3089
+Cycle 4: SoH predicted 68.9% | true 65.2% | inference 865 us
+  ALARM at t=1237.8 s: dT/dt=0.0549 C/s > 0.0352 C/s for 3 samples
+  end of cycle: ALARM (red LED)
+
+=== Summary (timings measured in Wokwi simulation) ===
+Model size: 2576 bytes (INT8)
+Tensor arena used: 756 of 4096 bytes
+Average inference time: 865 us over 4 inferences
+Done.

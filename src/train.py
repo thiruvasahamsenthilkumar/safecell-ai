@@ -62,6 +62,9 @@ def to_tflite(model, x_train_scaled, int8):
         conv.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
         conv.inference_input_type = tf.int8
         conv.inference_output_type = tf.int8
+        # One scale per weight tensor (not per output channel): the TFLite Micro
+        # version in the ESP32 library only supports per-tensor Dense weights.
+        conv._experimental_disable_per_channel_quantization_for_dense_layers = True
     return conv.convert()
 
 
