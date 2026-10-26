@@ -1,0 +1,5 @@
+slope,cycles,detection_rate_pct,avg_time_to_alarm_s,by_dTdt,by_temp_limit,alarm_before_fault,false_alarms_clean,clean_cycles
+0.01,636,42.30,1992.04,95,174,0,2,636
+0.02,636,97.48,940.55,167,453,0,2,636
+0.05,636,100.00,46.66,636,0,0,2,636
+0.10,636,100.00,37.31,636,0,0,2,636
