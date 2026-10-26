@@ -1,0 +1,16 @@
+test_battery,model,mae_soh_pct,rmse_soh_pct
+B0005,linear,1.722,1.978
+B0005,mlp_fp32,1.618,1.888
+B0005,mlp_int8,1.707,1.980
+B0006,linear,4.769,4.947
+B0006,mlp_fp32,4.532,4.940
+B0006,mlp_int8,4.571,4.982
+B0007,linear,1.002,1.272
+B0007,mlp_fp32,0.981,1.185
+B0007,mlp_int8,0.892,1.085
+B0018,linear,2.132,2.251
+B0018,mlp_fp32,3.308,3.553
+B0018,mlp_int8,3.462,3.699
+average,linear,2.406,2.612
+average,mlp_fp32,2.610,2.891
+average,mlp_int8,2.658,2.937
